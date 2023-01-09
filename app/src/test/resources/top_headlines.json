@@ -1,0 +1,32 @@
+{
+  "status": "ok",
+  "totalResults": 30,
+  "articles": [
+    {
+      "source": {
+        "id": null,
+        "name": "EL PAÍS"
+      },
+      "author": "Ediciones Cinco Días",
+      "title": "Xiaomi prepara la llegada del ambicioso Redmi Note 12 Turbo - Cinco Días",
+      "description": "El nuevo smartphone de la compañía",
+      "url": "https://cincodias.elpais.com/cincodias/2023/01/09/smartphones/1673278291_284966.html",
+      "urlToImage": "https://d500.epimg.net/cincodias/imagenes/2023/01/09/smartphones/1673278291_284966_1673278428_rrss_normal.jpg",
+      "publishedAt": "2023-01-09T16:26:41Z",
+      "content": "Redmi ya introdujo en el mercado la línea Note 12 con características impresionantes y precios asequibles, pero quien piense que Xiaomi se iba a detener ahí Estaba muy equivocado. Kacper Skrzypek ha … [+2687 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Los40.com"
+      },
+      "author": "LOS40",
+      "title": "Nintendo presenta sus grandes propuestas para 2023 - LOS40",
+      "description": "De Bayonetta Origins a The Legend of Zelda Tears of the kingdom",
+      "url": "https://los40.com/los40/2023/01/09/videojuegos/1673280780_659652.html",
+      "urlToImage": "https://los40es00.epimg.net/los40/imagenes/2023/01/09/videojuegos/1673280780_659652_1673281361_rrss_normal.jpg",
+      "publishedAt": "2023-01-09T16:24:00Z",
+      "content": "2023 promete ser un año de grandes títulos para la industria que seguirá combinando un modelo mixto de negocio entre el juego on demand, el free to play y las nuevas y grandes IPs que consiguen atrae… [+2997 chars]"
+    }
+  ]
+}
