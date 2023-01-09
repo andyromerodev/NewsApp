@@ -1,6 +1,8 @@
 package com.example.newsapp
 
 import com.example.newsapp.provider.NewsProvider
+import com.example.newsapp.repository.InvalidApiKeyException
+import com.example.newsapp.repository.MissingApiKeyException
 import com.example.newsapp.repository.NewsRepositoryImp
 import kotlinx.coroutines.runBlocking
 import okhttp3.OkHttpClient
@@ -49,6 +51,25 @@ class NewsRepositoryTest {
         }
     }
 
+    @Test
+    fun `Api key missing exception` (){
+        mockWebServer.enqueueResponse("api_key_missing.json")
+        assertThrows(MissingApiKeyException::class.java){
+            runBlocking {
+                newsRepository.getNews("CU")
+            }
+        }
+    }
+
+    @Test
+    fun `Api key invalid exception` (){
+        mockWebServer.enqueueResponse("api_key_invalid.json")
+        assertThrows(InvalidApiKeyException::class.java){
+            runBlocking {
+                newsRepository.getNews("CU")
+            }
+        }
+    }
     fun MockWebServer.enqueueResponse(filePath: String) {
         val inputStream = javaClass.classLoader?.getResourceAsStream(filePath)
         val source = inputStream?.source()?.buffer()
