@@ -38,7 +38,9 @@ class MainActivity : ComponentActivity() {
                             ListScreen(navController)
                         }
                         composable("${Destinations.DETAILS_SCREEN}/{newTitle}"){
-
+                            it.arguments?.getString("newTitle")?.let { title ->
+                                DetailsScreen( title, navController)
+                            }
                         }
                     }
                 }
