@@ -56,6 +56,7 @@ dependencies {
     implementation "androidx.compose.ui:ui:$compose_ui_version"
     implementation "androidx.compose.ui:ui-tooling-preview:$compose_ui_version"
     implementation 'androidx.compose.material:material:1.1.1'
+    implementation "androidx.compose.runtime:runtime-livedata:$compose_ui_version"
 
     // Images load
     implementation "io.coil-kt:coil-compose:2.2.2"
@@ -72,6 +73,8 @@ dependencies {
     implementation "androidx.hilt:hilt-navigation-compose:1.0.0"
     implementation "com.google.dagger:hilt-android:2.44.2"
     kapt "com.google.dagger:hilt-compiler:2.44.2"
+
+
 
     testImplementation 'junit:junit:4.13.2'
     testImplementation "com.squareup.okhttp3:mockwebserver:4.9.3"
