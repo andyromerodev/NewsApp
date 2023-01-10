@@ -2,7 +2,8 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
-    id 'com.google.dagger.hilt.android' version '2.44.2' apply false
+    id 'dagger.hilt.android.plugin'
+    //id 'com.google.dagger.hilt.android' version '2.44.2' apply false
 }
 
 android {

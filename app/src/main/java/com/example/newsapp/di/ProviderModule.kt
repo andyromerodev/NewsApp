@@ -19,7 +19,7 @@ import javax.inject.Singleton
 class ProviderModule {
     @Provides
     @Named("BaseUrl")
-    fun provideBaseUrl() = "https://newsapi.org/v2".toHttpUrl()
+    fun provideBaseUrl() = "https://newsapi.org/v2/".toHttpUrl()
 
     @Singleton
     @Provides

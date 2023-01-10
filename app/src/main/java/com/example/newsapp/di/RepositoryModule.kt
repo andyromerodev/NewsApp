@@ -1,6 +1,8 @@
 package com.example.newsapp.di
 
 import com.example.newsapp.provider.NewsProvider
+import com.example.newsapp.repository.NewsRepository
+import com.example.newsapp.repository.NewsRepositoryImp
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -17,20 +19,9 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 class RepositoryModule {
-    @Provides
-    @Named("BaseUrl")
-    fun provideBaseUrl() = "https://newsapi.org/v2".toHttpUrl()
 
     @Singleton
     @Provides
-    fun provideRetrofit(@Named("BaseUrl") baseUrl: HttpUrl): Retrofit {
-        return Retrofit.Builder()
-            .addConverterFactory(GsonConverterFactory.create())
-            .baseUrl(baseUrl).build()
-    }
-
-    @Singleton
-    @Provides
-    fun providerNewsProvider(retrofit: Retrofit): NewsProvider =
-        retrofit.create(NewsProvider::class.java)
+    fun providerNewsProvider(provider: NewsProvider): NewsRepository =
+        NewsRepositoryImp(provider)
 }
