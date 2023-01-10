@@ -21,12 +21,14 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import coil.compose.rememberAsyncImagePainter
+import coil.compose.rememberImagePainter
 import com.example.newsapp.model.News
 import com.example.newsapp.ui.theme.NewsAppTheme
 
@@ -63,10 +65,10 @@ fun ListScreen(
                         }
                     ) {
                     Column() {
-                          Image(
+                        Image(
                             modifier = Modifier.fillMaxWidth().aspectRatio(16f/9f),
                             painter = rememberAsyncImagePainter(
-                            model = new.url,
+                            model = new.urlToImage,
                             placeholder = painterResource(R.drawable.placeholder),
                             error = painterResource(R.drawable.placeholder)
                         ),
@@ -94,9 +96,9 @@ fun ListPreview() {
         ListScreen(
             navController = rememberNavController(),
             news = arrayListOf(
-                News("Titulo1", "Descripcion1", "andy", ""),
-                News("Titulo2", "Descripcion2", "selma", ""),
-                News("Titulo3", "Descripcion3", "teresa", "")
+                News("Titulo1", "Descripcion1", "andy", "", ""),
+                News("Titulo2", "Descripcion2", "selma", "", ""),
+                News("Titulo3", "Descripcion3", "teresa", "", "")
             ))
     }
 }

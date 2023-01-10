@@ -74,7 +74,7 @@ fun DetailsScreen(
                             .fillMaxWidth()
                             .aspectRatio(16f / 9f),
                         painter = rememberAsyncImagePainter(
-                            model = new.url,
+                            model = new.urlToImage,
                             placeholder = painterResource(R.drawable.placeholder),
                             error = painterResource(R.drawable.placeholder)
                         ),
@@ -118,7 +118,7 @@ fun DetailsPreview() {
         DetailsScreen(
             newTitle = "Hello",
             navController = rememberNavController(),
-            new = News("Titulo1", "Descripcion1", "andy", "")
+            new = News("Titulo1", "Descripcion1", "andy", "", "")
         )
 
     }
